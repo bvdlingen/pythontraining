@@ -1,17 +1,11 @@
 ## Generate a human readable 'random' password
 ## password  will be generated in the form 'word'+digits+'word' 
-## eg.,nice137pass
+## eg.,nice37pass
 ## parameters: number of 'characters' , number of 'digits'
 ## Pradeep Kishore Gowda <pradeep at btbytes.com >
 ## License : GPL 
-## Date : 2005.April.15
-## Revision 1.2 
-## ChangeLog: 
-## 1.1 - fixed typos 
-## 1.2 - renamed functions _apart & _npart to a_part & n_part as zope does not allow functions to 
-## start with _
 
-def nicepass(alpha=6,numeric=2):
+def nicepass(alpha=8,numeric=3):
     """
     returns a human-readble password (say rol86din instead of 
     a difficult to remember K8Yn9muL ) 
@@ -54,4 +48,4 @@ def nicepass(alpha=6,numeric=2):
     return "%s%s%s" % (start,mid,end)
     
 if __name__ == "__main__":
-    print nicepass(6,2)      
+    print nicepass(8,2)      
